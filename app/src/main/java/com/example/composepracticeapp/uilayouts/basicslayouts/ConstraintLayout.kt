@@ -1,4 +1,4 @@
-package com.example.composepracticeapp.uilayouts
+package com.example.composepracticeapp.uilayouts.basicslayouts
 
 
 import androidx.compose.foundation.background
