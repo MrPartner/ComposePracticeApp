@@ -29,6 +29,9 @@ import com.example.composepracticeapp.uilayouts.controlselection.CheckInfo
 import com.example.composepracticeapp.uilayouts.controlselection.MyCheckBoxWithTextCompleted
 import com.example.composepracticeapp.uilayouts.controlselection.MyRadioButtonList
 import com.example.composepracticeapp.uilayouts.dialogs.MyAlertDialog
+import com.example.composepracticeapp.uilayouts.dialogs.MyConfirmationDialog
+import com.example.composepracticeapp.uilayouts.dialogs.MyCustomDialog
+import com.example.composepracticeapp.uilayouts.dialogs.MySImpleCustomDialog
 import com.example.composepracticeapp.uilayouts.otherlayouts.MyDropdownMenu
 import com.example.composepracticeapp.uilayouts.texttextfield.MyTextFieldAdvance2
 
@@ -51,11 +54,8 @@ class MainActivity : ComponentActivity() {
                             Button(onClick = { show = true }) {
                                 Text(text = "Mostrar dialogo")
                             }
-                            MyAlertDialog(
-                                show = show,
-                                onDismiss = { show = false },
-                                onConfirm = { Log.i("aris", "click") })
                         }
+                        MyConfirmationDialog(show = show, onDismiss = { show = false })
 
                     }
                 }
@@ -63,37 +63,3 @@ class MainActivity : ComponentActivity() {
         }
     }
 }
-
-//ChechBox state hoisting  1
-@Composable
-fun getOptions(titles: List<String>): List<CheckInfo> {
-    return titles.map { it ->
-        var status by rememberSaveable {
-            mutableStateOf(false)
-        }
-        CheckInfo(
-            title = it,
-            selected = status,
-            onCheckedChange = { newStatus -> status = newStatus }
-        )
-    }
-}
-/* /1 CB state hoisting
-val myOptions =
-getOptions(listOf("Ejemplo1", "Ejemplo2", "Ejemplo3", "Ejemplo4"))
-Column (){
-myOptions.forEach {
-MyCheckBoxWithTextCompleted(it)
-}
-} /1 */ //CB state hoisting
-/////////////////////////////////////
-
-/*2 RB state hoisting
-var selected by rememberSaveable {
- mutableStateOf("Ejemplo1")
-}
-Column {
-MyRadioButtonList(selected) { selected = it }
-} */ //2 RB state hoisting
-
-//////////////////////////////////////
