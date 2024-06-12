@@ -10,6 +10,8 @@ import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Surface
 import androidx.compose.ui.Modifier
 import com.example.composepracticeapp.loginbasico.LoginScreen
+import com.example.composepracticeapp.tuit.MyTuit
+import com.example.composepracticeapp.tuit.TwitterCard
 import com.example.composepracticeapp.ui.theme.ComposePracticeAppTheme
 
 
@@ -21,7 +23,7 @@ class MainActivity : ComponentActivity() {
             ComposePracticeAppTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
                     Surface(modifier = Modifier.padding(innerPadding)) {
-                        LoginScreen()
+                        TwitterCard()
 
                     }
                 }
