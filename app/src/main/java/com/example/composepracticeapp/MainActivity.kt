@@ -15,7 +15,10 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.modifier.modifierLocalMapOf
 import androidx.compose.ui.unit.dp
 import com.example.composepracticeapp.loginbasico.LoginScreen
+import com.example.composepracticeapp.recyclerview.SuperHeroGridView
+import com.example.composepracticeapp.recyclerview.SuperHeroStickyView
 import com.example.composepracticeapp.recyclerview.SuperHeroView
+import com.example.composepracticeapp.recyclerview.SuperHeroWithSpecialControlsView
 import com.example.composepracticeapp.tuit.TuitDivider
 import com.example.composepracticeapp.tuit.TwitterCard
 import com.example.composepracticeapp.ui.theme.ComposePracticeAppTheme
@@ -29,13 +32,8 @@ class MainActivity : ComponentActivity() {
             ComposePracticeAppTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
                     Surface(modifier = Modifier.padding(innerPadding)) {
-                        Column(
-                            modifier = Modifier
-                                .fillMaxSize()
-                        ) {
-                            SuperHeroView()
 
-                        }
+                        SuperHeroStickyView()
 
                     }
                 }
