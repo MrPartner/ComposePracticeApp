@@ -1,5 +1,5 @@
 [versions]
-agp = "8.4.1"
+agp = "8.4.2"
 constraintlayoutCompose = "1.0.1"
 constraintlayoutComposeVersion = "1.0.1"
 kotlin = "2.0.0"
@@ -7,17 +7,19 @@ coreKtx = "1.13.1"
 junit = "4.13.2"
 junitVersion = "1.1.5"
 espressoCore = "3.5.1"
-lifecycleRuntimeKtx = "2.8.1"
+lifecycleRuntimeKtx = "2.8.2"
 activityCompose = "1.9.0"
-composeBom = "2024.05.00"
+composeBom = "2024.06.00"
 constraintlayout = "2.1.4"
-material = "1.6.7"
+material = "1.6.8"
+navigationCompose = "2.7.7"
 
 [libraries]
 androidx-constraintlayout-compose = { module = "androidx.constraintlayout:constraintlayout-compose", version.ref = "constraintlayoutCompose" }
 androidx-constraintlayout-compose-v101 = { module = "androidx.constraintlayout:constraintlayout-compose", version.ref = "constraintlayoutComposeVersion" }
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
 androidx-material = { module = "androidx.compose.material:material", version.ref = "material" }
+androidx-navigation-compose = { module = "androidx.navigation:navigation-compose", version.ref = "navigationCompose" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }
 androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
 androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
