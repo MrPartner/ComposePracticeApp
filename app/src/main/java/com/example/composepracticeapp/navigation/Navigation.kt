@@ -19,7 +19,7 @@ fun Screen1(navigationController: NavHostController) {
             .background(Color.Cyan)
     ) {
         Text(text = "Pantalla 1", modifier = Modifier.align(Alignment.Center).clickable {
-            navigationController.navigate("pantalla2")
+            navigationController.navigate(Routes.Pantalla2.route)
         })
     }
 }
@@ -32,7 +32,7 @@ fun Screen2(navigationController: NavHostController) {
             .background(Color.Green)
     ) {
         Text(text = "Pantalla 2", modifier = Modifier.align(Alignment.Center).clickable {
-            navigationController.navigate("pantalla3")
+            navigationController.navigate(Routes.Pantalla3.route)
         })
     }
 }
@@ -44,6 +44,19 @@ fun Screen3(navigationController: NavHostController) {
             .fillMaxSize()
             .background(Color.Magenta)
     ) {
-        Text(text = "Pantalla 3", modifier = Modifier.align(Alignment.Center))
+        Text(text = "Pantalla 3", modifier = Modifier.align(Alignment.Center).clickable {
+            navigationController.navigate("pantalla4/545")
+        })
+    }
+}
+
+@Composable
+fun Screen4(navigationController: NavHostController, name:Int) {
+    Box(
+        modifier = Modifier
+            .fillMaxSize()
+            .background(Color.Yellow)
+    ) {
+        Text(text = name.toString(), modifier = Modifier.align(Alignment.Center))
     }
 }
