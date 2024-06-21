@@ -65,7 +65,7 @@ fun ConstraintExample1() {
 
 
 @Composable
-fun ConstraintEcampleGuide() {
+fun ConstraintExampleGuide() {
     ConstraintLayout(modifier = Modifier.fillMaxSize()) {
 //        val topGuide = createGuidelineFromTop(16.dp)
         val topGuide = createGuidelineFromTop(0.1f)

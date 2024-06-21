@@ -16,20 +16,20 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 
-//@Preview(showBackground = true)
-//@Composable
-//fun MyColumn() {
-//    Column(modifier = Modifier.fillMaxSize()) {
-//        Text(text = "Ejemplo1", modifier = Modifier.background(Color.Red).weight(1f))
-//        Text(text = "Ejemplo2", modifier = Modifier.background(Color.Black).weight(1f))
-//        Text(text = "Ejemplo3", modifier = Modifier.background(Color.Cyan).weight(1f))
-//        Text(text = "Ejemplo4", modifier = Modifier.background(Color.Blue).weight(1f))
-//    }
-//}
 
-@Preview(showBackground = true)
 @Composable
 fun MyColumn() {
+    Column(modifier = Modifier.fillMaxSize()) {
+        Text(text = "Ejemplo1", modifier = Modifier.background(Color.Red).weight(1f))
+        Text(text = "Ejemplo2", modifier = Modifier.background(Color.Black).weight(1f))
+        Text(text = "Ejemplo3", modifier = Modifier.background(Color.Cyan).weight(1f))
+        Text(text = "Ejemplo4", modifier = Modifier.background(Color.Blue).weight(1f))
+    }
+}
+
+@Preview(showBackground = true, showSystemUi = true)
+@Composable
+fun MyColumn2() {
     Column(modifier = Modifier.fillMaxSize(), verticalArrangement = Arrangement.SpaceBetween) {
         Text(
             text = "Ejemplo1",

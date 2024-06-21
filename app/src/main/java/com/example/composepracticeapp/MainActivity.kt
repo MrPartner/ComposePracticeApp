@@ -19,6 +19,7 @@ import com.example.composepracticeapp.navigation.Screen1
 import com.example.composepracticeapp.navigation.Screen2
 import com.example.composepracticeapp.navigation.Screen3
 import com.example.composepracticeapp.navigation.Screen4
+import com.example.composepracticeapp.navigation.Screen5
 import com.example.composepracticeapp.ui.theme.ComposePracticeAppTheme
 
 
@@ -40,12 +41,21 @@ class MainActivity : ComponentActivity() {
                             composable(Routes.Pantalla2.route) { Screen2(navigationController) }
                             composable(Routes.Pantalla3.route) { Screen3(navigationController) }
                             composable(
-                                "pantalla4/{name}",
-                                arguments = listOf(navArgument("name") { type = NavType.IntType })
+                                Routes.Pantalla4.route,
+                                arguments = listOf(navArgument("age") { type = NavType.IntType })
                             ) { backStackEntry ->
                                 Screen4(
                                     navigationController,
-                                    backStackEntry.arguments?.getInt("name") ?: 0
+                                    backStackEntry.arguments?.getInt("age") ?: 0
+                                )
+                            }
+                            composable(
+                                Routes.Pantalla5.route,
+                                arguments = listOf(navArgument("name") { defaultValue = "Pepe" })
+                            ) { backStackEntry ->
+                                Screen5(
+                                    navigationController,
+                                    backStackEntry.arguments?.getString("name").orEmpty()
                                 )
                             }
                         }
